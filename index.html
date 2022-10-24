@@ -6,70 +6,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagina HTML</title>
-    <script src="js/script.js"></script>
-    <link rel="stylesheet" href="/css/app.css">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="css/app.css">
 </head>
 
-<body>
-    <header>
-        <!--<input type="text" id="area">
-        <div class="bot">
-            <button type="" onclick="document.getElementById('area').innerHTML = prompt('Qual eh o Seu Nome:')">Modificar texto</button>
-            <button onclick="this.innerHTML = prompt('Qual o nome do botao')"> sem nome</button>
+<body onload="resetar()">
+    <nav class="menu">
+        <input type="checkbox" class="menu_faketrigger">
+        <div class="menu_lines">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-        <h1 id="area">Ola Mundo!</h1>
-        <br>-
-        <input type="text" id="ingredientes">
-        <button onclick="adicionaringledientes()">Adicionar</button>
-        <br><br>
-        <ul id="lista">
-            <li>Item1</li>
-            <li>Item1</li>
-            <li>Item1</li>
-        </ul>-->
-        <!-- <button onclick="fazeraccao('FILIPE', 30)">Fazer Accao</button>-->
+        <div class="desc">
+            <h1>MENU</h1>
+        </div>
+        <ul>
+            <li>
+                <a href="">Home</a>
+            </li>
+            <li>
+                <a href="">About</a>
+            </li>
+            <li>
+                <a href="">Settings</a>
+            </li>
+            <li>
+                <a href="">Exit</a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <div class="container">
+            <h1 id="resultado">Adivinhe o Numero!</h1>
+            <div class="inputs">
+                <div id="n1">0</div>
+                <input type="text" id="n2">
+                <div style="clear: both;"></div>
+            </div>
+        </div>
         <div class="butoes">
-
-            <table>
-                <caption>Calculos Basicos</caption>
-                <th colspan="2">
-                    <h1 id="resultado"></h1>
-                </th>
-                <tr>
-                    <td colspan="2">
-                        <label for="number1">Valor 1:</label>
-                        <input type="text" name="campo1" id="campo1" required>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        <label for="number2">Valor 2:</label>
-                        <input type="text" name="campo2" id="campo2" required>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <button type="submit" onclick="somar()" style="background-color: greenyellow; color: red;">+</button>
-                    </td>
-                    <td>
-                        <button type="submit" onclick="sub()">-</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <button type="submit" onclick="mult()">x</button>
-                    </td>
-                    <td>
-                        <button type="submit" onclick="div()">/</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2"><button type="reset" value="">Limpar</button></td>
-                </tr>
-            </table>
+            <button onclick="verificar()" id="verificar">Verificar</button>
+            <button onclick="actualizar()" id="actualizar">Tentar Novamente</button>
         </div>
-    </header>
-
+    </main>
 </body>
 
 </html>
